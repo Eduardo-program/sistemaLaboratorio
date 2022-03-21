@@ -109,12 +109,9 @@
             <?php if( $mostrar[0] == "Administrador" || $mostrar[0] == "ROOT"): ?>
               <li> <a href="usuarios.php"><span class="glyphicon glyphicon-user"></span> Gestão Usuários</a></li>
               <?php if( $mostrar[0] == "ROOT"): ?>
-              <li> <a href="fechamento.php"><span class="glyphicon glyphicon-floppy-saved"></span> Fechamento</a></li>
+              <li> <a href="fechamento.php"><span class="glyphicon glyphicon-floppy-saved"></span> Backup DataBase</a></li>
               <?php endif; ?>
             <?php endif; ?>
-              <?php if( $mostrar[0] == "Administrador" || $mostrar[0] == "ROOT" || $mostrar[0] == "Analista" || $mostrar[0] == "Técnico III"): ?>
-              <li> <a href="../frente_loja/frente_loja.php"><span class="glyphicon glyphicon-shopping-cart"></span> Frente Loja</a></li>
-              <?php endif; ?>
               <li> <a style="color: red" href="../procedimentos/sair.php"><span class="glyphicon glyphicon-off"></span> Sair</a></li>
                     
             </ul>

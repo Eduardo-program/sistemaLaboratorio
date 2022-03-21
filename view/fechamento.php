@@ -14,24 +14,16 @@
 <body style="background-color: #B0C4DE">
 
 	
-	<?php
-	require_once "../classes/conexao.php";
+<?php
+    $toDay = date('d-m-Y');
 
-	$date = date('m-d-Y');
+    $dbhost =   "localhost";
+    $dbuser =   "root";
+    $dbpass =   "";
+    $dbname =   "estoque";
 
-	$command = "mysqldump -uroot estoque > ../bd/database_$date.sql";
-	exec($command,$result, $output);
-
-	if($output != 0) {
-		echo 'Erro ao realizar backup';
-	}else {
-		echo 'Database salva com sucesso';
-	}
-
-	?>
-
-
-
+    exec("mysqldump --user=$dbuser --password='$dbpass' --host=$dbhost $dbname > ../bd/".$toDay."_database.sql");
+?>
 
 
 </body>
