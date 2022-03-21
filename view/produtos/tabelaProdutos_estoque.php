@@ -12,7 +12,7 @@ require_once "../../classes/conexao.php";
 	pro.preco, 
 	pro.codigo_protheus
 	from produtos as pro 
-	inner join estoque_prod as isf on pro.id_produto=isf.id_produto";
+	inner join estoque_produto as isf on pro.id_produto=isf.id_produto";
 	$result = mysqli_query($conexao, $sql);
 
 ?>
