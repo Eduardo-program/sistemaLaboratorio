@@ -3,7 +3,7 @@
 	$obj = new conectar();
 	$conexao = $obj->conexao();
 
-	$sql = "SELECT * from usuarios where email='admin'";
+	$sql = "SELECT count(*) from usuarios";
 	$result = mysqli_query($conexao, $sql);
 
 	$validar = 0;
