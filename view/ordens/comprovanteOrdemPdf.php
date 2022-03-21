@@ -2,26 +2,26 @@
 	require_once "../../classes/conexao.php";
 	require_once "../../classes/ordens.php";
 
-	$objv= new ordens();
+	$objv = new ordens();
 
 
 	$c= new conectar();
-	$conexao=$c->conexao();
-	$idordem=$_GET['idordem'];
+	$conexao = $c->conexao();
+	$idordem = $_GET['idordem'];
 
  $sql="SELECT ve.id_ordem,
-		ve.dataabertura,
-		ve.id_cliente,
-		ve.id_produto,
-		ve.observacao,
-		pro.descricao,
-		cli.numero_loja,
-		cli.cdatendimento,
-		cli.cidade
+			ve.dataabertura,
+			ve.id_cliente,
+			ve.id_produto,
+			ve.observacao,
+			pro.descricao,
+			cli.numero_loja,
+			cli.cdatendimento,
+			cli.cidade
 	from ordens as ve 
 	inner join produtos as pro on ve.id_produto=pro.id_produto
 	inner join lojas as cli on ve.id_cliente=cli.id_loja
-	and ve.id_ordem='$idordem'";
+	and ve.id_ordem = '$idordem' ";
 
 	$result=mysqli_query($conexao,$sql);
 
@@ -36,11 +36,11 @@
 
  	<style type="text/css">
 		
-@page {
-            margin-top: 0.3em;
-            margin-left: 0.3em;
-            margin-right: 0.3em;
-            margin-bottom: 0.3em;
+	@page{
+        margin-top: 0.3em;
+        margin-left: 0.3em;
+        margin-right: 0.3em;
+        margin-bottom: 0.3em;
         }
     body{
     	font-size: xx-small;
@@ -48,10 +48,10 @@
 	</style>
 
  		
- 		<p align="center" >LABORATORIO</p>
+ 		<p align="center" >LABORATORIO DE INFORMÁTICA</p>
  		<p>#################################</p>
  		<p>
- 			DATA: <?php echo date("d/m/Y", strtotime($data)) ?>
+ 			DATA: <?php echo $ver[2] ?>
  		</p>
  		<p>
  			<?php echo $ver[7] ?>
