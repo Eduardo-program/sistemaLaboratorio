@@ -12,7 +12,7 @@ class entradas{
 		$quantN = $dados[2];
 		$quantNew = $quantS + $quantN;
 
-		$data = date('Y-m-d');
+		$data = date('d/m/Y');
 
 		$sqlN = "UPDATE estoque_produto SET quantidade = '$quantNew'  where id_produto='$dados[1]' ";
 		$result = mysqli_query($conexao, $sqlN);
@@ -33,7 +33,7 @@ class entradas{
 		$c = new conectar();
 		$conexao=$c->conexao();
 
-		$sql = "SELECT id_nota, numero_nota, id_produto, id_fornecedor, quantidade, preco from notas_fiscais where id_nota='$idnota' ";
+		$sql = "SELECT id_nota, numero_nota, id_produto, id_fornecedor, quantidade, preco from notas_fiscais where id_nota='$identrada' ";
 
 			$result = mysqli_query($conexao, $sql);
 			$mostrar = mysqli_fetch_row($result);

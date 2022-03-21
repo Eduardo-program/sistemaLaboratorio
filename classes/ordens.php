@@ -5,7 +5,7 @@ class ordens{
 		$c = new conectar();
 		$conexao=$c->conexao();
 
-		$data = date('Y-m-d');
+		$data = date('d/m/Y');
 
 		$sql = "INSERT into ordens (id_cliente, id_produto, id_usuario, observacao, prazo, status, dataabertura) VALUES ('$dados[1]', '$dados[2]', 
 		   '$dados[0]',
