@@ -12,7 +12,7 @@ class entradas{
 		$quantN = $dados[2];
 		$quantNew = $quantS + $quantN;
 
-		$data = date('d/m/Y');
+		$data = date('d-m-Y');
 
 		$sqlN = "UPDATE estoque_produto SET quantidade = '$quantNew'  where id_produto='$dados[1]' ";
 		$result = mysqli_query($conexao, $sqlN);

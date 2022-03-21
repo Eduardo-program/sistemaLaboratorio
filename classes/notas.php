@@ -15,7 +15,7 @@ class notas{
 		$sqlN = "UPDATE estoque_produto SET quantidade=$quantNew where id_produto='$dados[1]' ";
 		$result = mysqli_query($conexao, $sqlN);
 
-		$data = date('d/m/Y');
+		$data = date('d-m-Y');
 
 		$sql = "INSERT into notas_fiscais ( numero_nota, id_produto, id_fornecedor, quantidade, preco, dataentrada ) VALUES ('$dados[0]', '$dados[1]', 
 		   '$dados[2]',

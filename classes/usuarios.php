@@ -5,7 +5,7 @@ class usuarios{
 		$c = new conectar();
 		$conexao=$c->conexao();
 
-		$data = date('d/m/Y');
+		$data = date('d-m-Y');
 
 		$sql = "INSERT into usuarios (nome, user, email, funcao, senha, datacaptura) VALUES ('$dados[0]', '$dados[1]', '$dados[2]', '$dados[3]', '$dados[4]', '$data')";
 
